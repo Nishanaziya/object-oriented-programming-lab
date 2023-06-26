@@ -1,15 +1,15 @@
 package graphics;
-import java.util.*;
-interface Rect{
-    void rectangle();
-}
 
-public class Rectangle implements Rect{
-    Scanner sc = new Scanner(System.in);
-    public void rectangle(){
-        System.out.println("Enter the length and breadth of the rectangle:");
-        int l = sc.nextInt();
-        int b = sc.nextInt();
-        System.out.println("The area of the rectangle is: "+(l*b));
+public class Rectangle implements Shape {
+    private double length,breadth;
+
+    public Rectangle(double length, double breadth){
+
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    public double area(){
+        return(this.length*this.breadth);
     }
 }

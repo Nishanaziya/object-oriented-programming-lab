@@ -1,16 +1,16 @@
 package graphics;
-import java.util.Scanner;
 
-interface Tri{
-    void triangle();
-}
+public class Triangle implements Shape {
 
-public class Triangle {
-    Scanner sc = new Scanner(System.in);
-    public void triangle(){
-        System.out.println("Enter the breadth and height of the triangle:");
-        int b = sc.nextInt();
-        int h = sc.nextInt();
-        System.out.println("The area of the triangle is: "+(0.5*b*h));
+    private double base,height;
+
+    public Triangle(double base,double height){
+
+        this.base = base;
+        this.height = height;
+    }
+
+    public double area(){
+        return(0.5*height*base);
     }
 }

@@ -12,30 +12,30 @@ class q10{
 
         switch(c)
         {
-            case 1:
+            case 1: {
                 System.out.print("Enter number to insert: ");
                 n = sc.nextInt();
                 list.add(n);
-                break;
+                break;}
 
-            case 2:
+            case 2:{
                 System.out.print("\nEnter number to be removed: ");
                 n =  sc.nextInt();
                 list.remove(n);
                 System.out.println(list);
-                break;
+                break;}
 
-            case 3:
+            case 3:{
                 System.out.print("\nIndex to be replaced: ");
                 int key = sc.nextInt();
                 System.out.print("\nENter the value to be inserted");
                 n= sc.nextInt();
                 list.set(key,n);
                 System.out.print(list);
-                break;
+                break;}
 
-            case 4:
-                System.out.print(list);
+            case 4:{
+                System.out.print(list);}
 
         }
     }while(c!=0);

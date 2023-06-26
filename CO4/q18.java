@@ -1,21 +1,25 @@
+import java.util.*;
+public class q18 {
 
-import java.util.Map;
-import java.util.HashMap;
-import java.util.TreeMap;
+	public static void main(String[] args) {
+		Map<String, String> map = new HashMap<>();
+        System.out.println("Enter the limit:");
+        Scanner inp = new Scanner(System.in);
+        int n= inp.nextInt();
+        System.out.println("Enter the Roll number and Name");
+        while(n!=0) {
 
-class q18{
-    public static void main(String args[]){
+            String e= inp.next();
+            String s= inp.next();
+            map.put(e, s);
+            n--;
+        }
 
-        HashMap <Integer,String> obj = new HashMap<>();
-        obj.put(1,"ammu");
-        obj.put(2,"appu");
+        System.out.println("HashMap:"+map);
+        Map<String, String> treeMap = new TreeMap<>();
+        treeMap.putAll(map);
+        System.out.println("TreeMap:"+treeMap);
 
-        System.out.print("Elements are:"+obj);
+	}
 
-        TreeMap <Integer,String> obj1 = new TreeMap<>(obj);
-        System.out.println("tree map is"+ obj1);
-
-
-
-    }
 }

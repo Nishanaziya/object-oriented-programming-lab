@@ -1,15 +1,15 @@
 package graphics;
-import java.util.Scanner;
 
-interface Sqr{
-    void square();
-}
+public class Square implements Shape{
 
-public class Square implements Sqr {
-    Scanner sc = new Scanner(System.in);
-    public void square(){
-        System.out.println("Enter a side of the square:");
-        int s = sc.nextInt();
-        System.out.println("The area of the square is: "+(s*s));
+    public double side;
+
+    public Square(double side){
+
+        this.side = side;
+    }
+
+    public double area(){
+        return(this.side*this.side);
     }
 }
